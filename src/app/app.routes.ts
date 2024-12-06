@@ -14,12 +14,12 @@ import { FooterComponent } from "./footer/footer.component";
 export const routes: Routes = [
     { path: '', component:NavbarComponent},
     { path: '', component:MainPageComponent},
-    { path: '', component:AboutMeComponent},
-    { path: '', component:SkillSetComponent},
-    { path: '', component:ProjectsComponent},
+    { path: 'aboutMe', component:AboutMeComponent},
+    { path: 'skills', component:SkillSetComponent},
+    { path: 'projects', component:ProjectsComponent},
         { path: '', component:JoinComponent},
         { path: '', component:ElPolloLocoComponent},
     { path: '', component:ReferenceComponent},
-    { path: '', component:ContactMeComponent},
+    { path: 'contact', component:ContactMeComponent},
     { path: '', component:FooterComponent},
 ];
