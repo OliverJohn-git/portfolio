@@ -1,8 +1,22 @@
-<nav>
-    <ul>
-      <li><a href="#about-me">About Me</a></li>
-      <li><a href="#skill-set">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-    </ul>
+<nav class="nav-bar">
+    <div>
+    <div class="language-toggle">
+        <button
+          [class.selected]="selectedLanguage === 'de'"
+          (click)="selectLanguage('de')"
+        >
+          DE
+        </button>
+        <button
+          [class.selected]="selectedLanguage === 'en'"
+          (click)="selectLanguage('en')"
+        >
+          EN
+        </button>
+      </div>
+      <div><li><a href="#about-me">About Me</a></li></div>
+      <div><li><a href="#skill-set">Skills</a></li></div>
+      <div><li><a href="#projects">Projects</a></li></div>
+    </div>
   </nav>
   

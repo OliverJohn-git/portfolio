@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  selectedLanguage: string = 'de'; // Default language
+
+  selectLanguage(lang: string) {
+    this.selectedLanguage = lang; // Update the selected language
+  }
+
 }
