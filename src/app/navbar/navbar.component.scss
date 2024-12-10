@@ -32,4 +32,33 @@
       color: white; 
     }
   }
+  .links-on-portfolio{
+    position: absolute;
+      top: 40px;
+    .link-text{
+      color: white;
+      text-decoration: none;
+    }
+
+    &:hover{
+      color: white;
+    }
+
+    .about-me{
+      position: absolute;
+      left: 290px;
+    }
+
+    .skill-set{
+      position: absolute;
+      left: 400px;
+    }
+    
+    .projects{
+      position: absolute;
+      left: 500px;
+    }
+    
+  } 
 }
+

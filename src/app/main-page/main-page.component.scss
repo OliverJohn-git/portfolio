@@ -1,39 +1,42 @@
-//  .background-container {
-//     background: linear-gradient(135deg, #4caf50, #81c784);
-//     width: 100%;
-//     max-width: 1440px; 
-//     height: 900px; 
-//     margin: 0 auto; 
-//     position: relative; 
+ .background-container {
+    background: linear-gradient(135deg, #1C1C1C, #08463B);
+    width: 100%;
+    max-width: 1440px; 
+    height: 900px; 
+    margin: 0; 
+    position: relative; 
   
-//   }
+    .headline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        color: white;
+        font-size: 36px;
+        font-weight: bold;
+      }
+    .main-page-buttons{
+       width: 363px;
+       height: 48px;
+       display: flex;
+       justify-content: space-between;
+       
+
+        .button-work{
+            width: 172px;
+            border-color: #FFFFFF;
+            border: 1px;
+            border-radius: 100px;
+        }
+        .button-contact-me{
+            width: 142px;
+            border-color: #FFFFFF;
+            border: 1px;
+            border-radius: 100px;
+        }
+    }
+
+  }
   
-//   .headline {
-//     position: absolute;
-//     top: 50px;
-//     left: 50px; 
-//     color: white;
-//     font-size: 36px;
-//     font-weight: bold;
-    
   
-  
-//   .box {
-//     position: absolute;
-//     bottom: 30px; 
-//     right: 50px; 
-//     width: 200px;
-//     height: 100px;
-//     background-color: rgba(255, 255, 255, 0.8); 
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     border-radius: 10px;
-//   }
-  
-//   .box p {
-//     margin: 0;
-//     color: #333;
-//     font-size: 16px;
-//   }
-//   }
