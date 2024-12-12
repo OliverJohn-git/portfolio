@@ -33,8 +33,12 @@
     }
   }
   .links-on-portfolio{
-    position: absolute;
-      top: 40px;
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   padding-left: 290px;
+   height: 100px;
+   gap: 21px;
     .link-text{
       color: white;
       text-decoration: none;
@@ -43,22 +47,8 @@
     &:hover{
       color: white;
     }
-
-    .about-me{
-      position: absolute;
-      left: 290px;
+    li{
+      display: flex;
     }
-
-    .skill-set{
-      position: absolute;
-      left: 400px;
-    }
-    
-    .projects{
-      position: absolute;
-      left: 500px;
-    }
-    
-  } 
+  }
 }
-
