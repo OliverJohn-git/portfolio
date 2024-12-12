@@ -1,10 +1,10 @@
 .nav-bar{  
     width: 100%;
-    height: 100px;
+    height: 70px;
 
     .language-toggle {
     position: absolute; 
-    top: 30px;
+    top: 10px;
     left: 120px;
     border: 1.5px solid #3DCFB6;
     border-radius: 50px;
@@ -37,8 +37,9 @@
    justify-content: left;
    align-items: center;
    padding-left: 290px;
-   height: 100px;
-   gap: 21px;
+   padding-top: 20px;
+   gap: 30px;
+   font-size: 26px;
     .link-text{
       color: white;
       text-decoration: none;
