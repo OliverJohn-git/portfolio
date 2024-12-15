@@ -1,5 +1,5 @@
  .background-container {
-    background: linear-gradient(45deg, #1C1C1C, #08463B);
+    background: linear-gradient(45deg, rgba(28, 28, 28, 1), rgba(8, 70, 59, 1));
     width: 100%;
     max-width: 1440px; 
     height: 900px; 
@@ -38,6 +38,7 @@
        padding-top: 20px;
        display: flex;
        justify-content: space-around;
+
       
        $button-width: 175px;
        $button-height: 50px;
@@ -69,16 +70,6 @@
            transform: translate(-50%, -50%);
            white-space: nowrap;
            transition: transform $transition-speed ease, opacity $transition-speed ease;
-       
-           &::after {
-             content: attr(data-text);
-             position: absolute;
-             left: 150%;
-             top: 50%;
-             transform: translateY(-50%);
-             opacity: 0;
-             transition: transform $transition-speed ease $transition-speed, opacity $transition-speed ease $transition-speed;
-           }
          }
        
          &:hover {
