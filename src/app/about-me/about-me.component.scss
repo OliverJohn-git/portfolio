@@ -1,0 +1,91 @@
+$bg-color: #0f2e2e;
+$card-bg-color: #1a3d3d;
+$primary-text-color: #ffffff; 
+$highlight-color: rgba(61, 207, 182, 1);
+$icon-color: #29e3e3;
+
+.background-container {
+    background: url(/public/assets/img/portfolia-background.png);
+    width: 100%;
+    max-width: 1440px; 
+    max-height: 900px; 
+    margin: 0; 
+    position: relative; 
+
+    .content {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1440px;
+        height: 900px;
+        padding:20px;
+        box-sizing: border-box;
+      
+        .image-section {
+          flex: 1;
+          img {
+            max-width: 100%;
+            border-radius: 10px;
+          }
+        }
+        .content-right{
+            display: flex;
+            justify-content: end;
+        }      
+
+        .above-contentbox{
+            height: auto;
+            gap: 10px;
+            p{
+            color: $highlight-color;
+            font-size: 24px;
+            }
+
+            .content-section {
+              width: 568px;
+              background-color: $card-bg-color;
+              border-radius: 10px;
+              border-color: #ffffff;
+              border: 2px;
+              padding: 40px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            
+              h2 {
+                font-size: 40px;
+                color: $highlight-color;
+                margin-bottom: 20px;
+                margin-top: 0px;
+              }
+          
+              p {
+                color: $primary-text-color;
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 24px;
+              }
+          
+              .icon-text {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 16px;
+
+                .iconbox{
+                    width: 60px;
+                    height: 50px;
+
+                    .icon {
+
+                        height: 30px;
+                    }
+                }
+                .spanbox{
+                    width: 400px;
+                    span {
+                    font-size: 18px;
+                    color: $primary-text-color;
+                    }
+                }    
+              }
+            }
+        }    
+    }
+}

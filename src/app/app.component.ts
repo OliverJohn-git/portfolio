@@ -13,7 +13,7 @@ import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, AboutMeComponent, SkillSetComponent, ProjectsComponent, JoinComponent, ElPolloLocoComponent, ReferenceComponent, ContactMeComponent, FooterComponent, MainPageComponent, ],
+  imports: [NavbarComponent, AboutMeComponent, SkillSetComponent, ProjectsComponent, JoinComponent, ElPolloLocoComponent, ReferenceComponent, ContactMeComponent, FooterComponent, MainPageComponent, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
