@@ -1,0 +1,83 @@
+$bg-color: #0f2e2e;
+$card-bg-color: #1a3d3d;
+$primary-text-color: #ffffff; 
+$highlight-color: rgba(61, 207, 182, 1);
+$icon-color: #29e3e3;
+$button-width: 175px;
+$button-height: 50px;
+$button-color: #1C3631;
+$text-color: white;
+$transition-speed: 0.5s;
+
+.background-container {
+    background: url(/public/assets/img/portfolia-background.png);
+    width: 100%;
+    width: 1440px; 
+    height: 900px; 
+    margin: 0; 
+    position: relative; 
+
+    .content{
+        display: flex;
+        justify-content: space-around;
+        max-width: 1440px;
+        height: 860px;
+        padding:20px;
+        box-sizing: border-box;
+
+        .skill-set-txt{
+          color: $highlight-color;
+            .card{
+                background-color:$card-bg-color ;
+                border-radius: 10px;
+                border-color:$highlight-color;
+                border: 2px;
+                padding: 40px;
+
+                .animated-button {
+                    position: relative;
+                    overflow: hidden;
+                    display: inline-block;
+                    width: $button-width;
+                    height: $button-height;
+                    background-color: $bg-color;
+                    color: $text-color;
+                    font-family: "Fira Code";
+                    font-weight: 400;
+                    font-size: 18px;
+                    margin: 0px;
+                    border: none;
+                    border-radius: 100Px;
+                    cursor: pointer;
+                  
+                    .button-text {
+                      display: inline-block;
+                      position: absolute;
+                      left: 50%;
+                      top: 15%;
+                      transform: translate(-50%, -50%);
+                      white-space: nowrap;
+                      transition: transform $transition-speed ease, opacity $transition-speed ease;
+                    }
+                  
+                    &:hover {
+                      .button-text {
+                        transform: translateX(-200%) translateY(-50%);
+                        opacity: 0;
+                  
+                        &::after {
+                          transform: translateX(-50%) translateY(-50%);
+                          opacity: 1;
+                        }
+                      }
+                    }
+                }
+            }
+        }
+
+        .skill-set-icon{
+
+        }
+    }
+
+}
