@@ -1,0 +1,102 @@
+$bg-color: #0f2e2e;
+$card-bg-color: #1a3d3d;
+$primary-text-color: #ffffff; 
+$highlight-color: rgba(61, 207, 182, 1);
+$icon-color: #29e3e3;
+$button-width: 175px;
+$button-height: 50px;
+$button-color: #1C3631;
+$text-color: white;
+$transition-speed: 0.5s;
+
+.background-container {
+    background: url(/public/assets/img/portfolia-background.png);
+    width: 100%;
+    width: 1440px; 
+    height: 900px; 
+    margin: 0px; 
+    position: relative; 
+
+   h1{
+    margin: 0;
+    font-family: "Fira Code";
+    font-weight: 700;
+    font-size: 64px;
+    color: $highlight-color;
+   }
+
+   h2{
+    margin: 0;
+    font-family: "Fira Code";
+    font-weight: 700;
+    font-size: 24px;
+    color: $text-color;
+   }
+
+   h3{
+    margin: 0;
+    font-family: "Klara";
+    font-weight: 700;
+    font-size: 24px;
+    color: $highlight-color;
+   }
+
+   h4{
+    margin: 0;
+    font-family: "Klara";
+    font-weight: 400;
+    font-size: 18px;
+    color: $text-color;
+   }
+
+   span{
+    margin: 0;
+    font-family: "Klara";
+    font-weight: 400;
+    font-size: 18px;
+    color:$text-color
+   }
+   .content{
+    display: flex;
+    flex-direction: column;
+    width: 880px;
+    height: 565px;
+    padding-left:96px;
+    gap: 41px;
+    margin: 0;
+
+    .headlines{
+        width:622px;
+        height: 112px;
+        gap: 20px;
+    }
+
+    .infotext{
+        width: 456px;
+        height: 44px;
+    }
+
+    .projects{
+        width: 880px;
+
+        .single-project{
+            height: 109px;
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .project-head{
+                padding-left: 20px;
+            }
+            
+            .project-code-types{
+                padding-right: 20px;
+            }
+
+        }
+    }
+
+
+   }
+}

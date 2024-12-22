@@ -13,16 +13,17 @@ $transition-speed: 0.5s;
     background: url(/public/assets/img/portfolia-background.png);
     width: 100%;
     width: 1440px; 
-    height: 900px; 
+    height: 500px; 
     margin: 0; 
     position: relative; 
 
     .content{
         display: flex;
         justify-content: space-around;
-        max-width: 1440px;
-        height: 860px;
-        padding:20px;
+        width: auto;
+        height: 500px;
+        padding-left:96px;
+        padding-right: 96px;
         box-sizing: border-box;
 
         .skill-set-txt{
@@ -76,7 +77,15 @@ $transition-speed: 0.5s;
         }
 
         .skill-set-icon{
-
+          .icon{
+            height: 64px;
+            width: 64px;
+          }
+          .name{
+            color: $highlight-color;
+            font-family: "Fira Code", monospace;
+            size: 18px;
+          }
         }
     }
 
