@@ -1,3 +1,16 @@
-<!-- <footer class="footer">
-    <p>&copy; 2024 Oliver John. All Rights Reserved.</p>
-  </footer>   -->
+<footer>
+  <div class="side">
+      <img id="logo" [src]="currentLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()"
+          (click)="scrollToTop()" alt="Logo">
+      <p>Web Developer</p>
+      <p>{{text.getText("greifswald")}}</p>
+  </div>
+  <div class="side">
+      <a href="https://github.com/Pe3et" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/peter-wolf-54a200339" target="_blank">LinkedIn</a>
+      <a href="mailto: contact@peeet.net">Email</a>
+      <a routerLink="/legal-notice">{{text.getText("legalNotice")}}</a>
+      <a routerLink="/privacy-policy">{{text.getText("privacyPolicy")}}</a>
+  </div>
+  <span>© Oliver John 2024</span>
+</footer>

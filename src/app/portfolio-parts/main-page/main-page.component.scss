@@ -1,128 +1,245 @@
- .background-container {
-    background: linear-gradient(45deg, rgba(28, 28, 28, 1), rgba(8, 70, 59, 1));
-    width: 100%;
-    max-width: 1440px; 
-    height: 900px; 
-    margin: 0; 
-    position: relative; 
-  
-    .headline {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: 0;
-      color: white;
-      h1{
-        font-size: 40px;
-        font-family: "Fira Code";
-        font-weight: 300;
-      }
-      span{
-        font-size: 128px;
-        font-family: "Fira Code";
-        font-weight: 700;
-      }
-    }
+@use './../../shared' as *;
 
-  .headline-button-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 30vh;
+section {
+  background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  color: #D9D9D9;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1440px;
+  padding: 30vh var(--outer_padding) 0 var(--outer_padding);
+
+  h2 {
+    font-family: 'Fira Code', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+    @media screen and ( min-width: 630px ) {
+      font-size: 32px;
+    }
+    @media screen and ( min-width: 1024px ) {
+      font-size: 40px;
+    }
   }
-    .main-page-buttons{
-       width: 363px;
-       height: 48px;
-       padding-top: 20px;
-       display: flex;
-       justify-content: space-around;
+  h1 {
+    font-family: 'Karla', sans-serif;
+    font-size: 62px;
+    font-weight: 700;
+    color: white;
+    @media screen and ( min-width: 630px ) {
+      font-size: 96px;
+    }
+    @media screen and ( min-width: 1024px ) {
+      font-size: 128px;
+    }
+  }
+}
+.buttons {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  @media screen and ( max-width: 395px ) {
+    flex-direction: column;
+  }
+  @media screen and ( min-width: 1024px ) {
+    gap: 48px;
+  }
+}
+.button {
+  overflow: hidden;
+  &:hover span {
+    position: relative;
+    animation: button_text_slide 2s ease infinite;
+  }
+}
+@keyframes button_text_slide {
+  0% {
+    left: 0;
+  }
+  29% {
+    left: -120%;
+  }
+  30% {
+    opacity: 0;
+    left: 120%;
+  }
+  31% {
+    opacity: 1;
+  }
+  80% {
+    left: 0;
+  }
+}
 
-      
-       $button-width: 175px;
-       $button-height: 50px;
-       $button-color: #1C3631;
-       $text-color: white;
-       $transition-speed: 0.5s;
-       
-       .animated-button {
-         position: relative;
-         overflow: hidden;
-         display: inline-block;
-         width: $button-width;
-         height: $button-height;
-         background-color: $button-color;
-         color: $text-color;
-         font-family: "Fira Code";
-         font-weight: 400;
-         font-size: 18px;
-         margin: 0px;
-         border: none;
-         border-radius: 100Px;
-         cursor: pointer;
-       
-         .button-text {
-           display: inline-block;
-           position: absolute;
-           left: 50%;
-           top: 15%;
-           transform: translate(-50%, -50%);
-           white-space: nowrap;
-           transition: transform $transition-speed ease, opacity $transition-speed ease;
-         }
-       
-         &:hover {
-           .button-text {
-             transform: translateX(-200%) translateY(-50%);
-             opacity: 0;
-       
-             &::after {
-               transform: translateX(-50%) translateY(-50%);
-               opacity: 1;
-             }
-           }
-         }
-       }
+.lateral_area {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1;
+  padding-top: 48px;
+  position: relative;
+
+  @media screen and ( min-width: 630px ) {
+    padding-top: 0;
+  }
+
+  .lateral {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    gap: 24px;
+  }
+  .left_lateral {
+    @extend .lateral;
+
+        .animation_arrow {
+      width: 30px;
+      height: 48px;
+      border-radius: 32px;
+      border: 1px solid $turquoise;
+      @include centerFlex();
+
+      .arrow {
+        animation: left_lateral_animation 3s ease infinite;
+        position: relative;
+        border: 1px solid white;
+        height: 16px;
+        border-radius: 1px;
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 1px;
+          width: 5px;
+          border: 1px solid white;
+          border-radius: 1px;
+        }
+        &::before {
+          left: -6px;
+          transform: rotate(45deg);
+        }
+        &::after {
+          left: -1px;
+          transform: rotate(-45deg);
+        }
       }
     }
-    .vector-left{
-      position: absolute;
-      bottom: 0;
-      left: 96px;
+    .vertical_line {
+      background: $turquoise;
     }
+  }
+  .vertical_line {
+    width: 1px;
+    flex: 1;
+  }
+  .right_lateral {
+    @extend .lateral;
 
-    .vector-right{
-      position: absolute;
-      bottom: 0;
-      right: 96px;
-      
-      .linkedin-main-page{
-        height: 32px;
-        width: 32px;
-        position: absolute;
-        top: -76px;
-        right: -16px;
+        .socials {
+      @include centerFlex();
+      flex-direction: column;
+      gap: 24px;
+      padding-top: 50px;
+      width: 32px;
+
+      #heroMail {
+        display: none;
+        font-size: 18px;
+
+        @media screen and ( min-width: 1024px) {
+          margin-top: -80px;
+          padding-top: 2px;
+          width: 80px;
+          height: 30px;
+          transform: rotate(-90deg);
+          display: flex;
+          &:hover {
+            color: $turquoise;
+          }
+        }
+      }
+      a:not(#heroMail):hover {
+        @include decorationDot('right');
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+      @media screen and ( min-width: 1024px) {
+        #heroMailIcon {
+          svg {
+            display: none;
+          }
+        }
+      }
+    }
+    .vertical_line {
+      background: white;
+    }
+  }
+  .marquee {
+    position: absolute;
+    left: calc(var(--outer_padding) * -1 - 3px);
+    bottom: 15%;
+    padding: 12px 0;
+    background: #FFFFFF1F;
+    backdrop-filter: blur(5.300000190734863px);
+    width: 1445px;
+    transform: rotate(-3deg);
+    overflow: hidden;
+
+    .marquee_content {
+      display: flex;
+      align-items: center;
+      gap: 56px;
+      font-family: 'Karla', sans-serif;
+      color: $turquoise;
+      @media screen and ( max-width: 1023px ) {
+        animation: marquee_scroll 12s linear infinite;
+      }
+      @media screen and ( min-width: 1024px ) {
+        animation: marquee_scroll_desktop 20s linear infinite;
       }
 
-      .git-main-page{
-        height: 32px;
-        width: 32px;
-        position: absolute;
-        top: -112px;
-        right: -16px;
+      p {
+        font-size: 24px;
+        min-width: fit-content;
+        @media screen and ( min-width: 1024px ) {
+          font-size: 32px;
+        }
+      }
+      span {
+        font-size: 50px;
+        padding-bottom: 5px;
+        line-height: 24px;
+        @media screen and ( min-width: 1024px ) {
+          line-height: 32px;
+        }
       }
     }
-
-    .banner{
-      height: 62px;
-      width: 1480px;
-      position: absolute;
-      bottom:20px;
-      rotate: 3°;
-      width: 100vw;
-      background-color: rgba(255, 255, 255, 0.12);
-      filter: blur(5.3);
-    }
-  
-  
+  }
+}
+@keyframes left_lateral_animation {
+  0% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+};

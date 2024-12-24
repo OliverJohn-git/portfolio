@@ -115,8 +115,8 @@ export class TextContentService {
         DE: "Datenschutz"
       },
       greifswald: {
-        EN: "Greifswald Germany",
-        DE: "Greifswald"
+        EN: "Freiberg Germany",
+        DE: "Freiberg"
       },
       contact: {
         EN: "Contact",

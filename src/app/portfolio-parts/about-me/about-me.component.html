@@ -1,33 +1,29 @@
 <section>
-    <div class="background-container">
-    
-        <div class="content">
-    <div class="content-left">
-        <div class="image-section">
-            <img src="/assets/img/about-me/13. Foto.png" alt="">
+    <main>
+        <div id="pictureContainer">
+            <img src="./assets/img/me.png" alt="me">
+            <img id="hoverImg" src="./assets/img/me_hover.svg" alt="me_hover">
         </div>
-    </div>
-    <div class="content-right">
-        <div class="above-contentbox">
-            <p>Who I Am</p>
-            <div class="content-section"> 
-                <h2>About me </h2>
-                <p>Hi, I’m a german speaking Frontend Developer based in Munich. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.</p>
-                <div class="icon-text">
-                    <div class="iconbox"><img src="/assets/img/about-me/location_on.png" alt="" class="icon"></div>
-                    <div class="spanbox"><span>Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.</span></div>
-                </div>
-                <div class="icon-text">    
-                    <div class="iconbox"><img src="/assets/img/about-me/cognition.png" alt="" class="icon"></div>
-                    <div class="spanbox"><span>I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.</span></div>
-                </div>
-                <div class="icon-text">    
-                    <div class="iconbox"><img src="/assets/img/about-me/new_releases.png" alt="" class="icon"></div>
-                    <div class="spanbox"><span>In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life.</span></div>
+        <div id="aboutmeContainer">
+            <p>{{text.getText("who")}}</p>
+            <div id="aboutmeCard">
+                <h1>{{text.getText("aboutmeHeading")}}</h1>
+                <p>{{text.getText("aboutme")}}</p>
+                <div id="iconsAndText">
+                    <div class="iconAndTextRow">
+                        <img src="./assets/img/location.svg" alt="location">
+                        <p>{{text.getText("aboutmeLocation")}}</p>
+                    </div>
+                    <div class="iconAndTextRow">
+                        <img src="./assets/img/mind.svg" alt="mind">
+                        <p>{{text.getText("aboutmeMind")}}</p>
+                    </div>
+                    <div class="iconAndTextRow">
+                        <img src="./assets/img/profession.svg" alt="profession">
+                        <p>{{text.getText("aboutmeProfession")}}</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>  
-    </div>
-    </div>
-</section> 
+    </main>
+</section>

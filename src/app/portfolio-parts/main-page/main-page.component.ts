@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { HeaderComponent } from './navbar/navbar.component';
+import { TextContentService } from './../../shared/text-content/text-content.service';
 
 @Component({
-  selector: 'app-main-page',
-  imports: [],
+  selector: 'app-hero',
+  imports: [HeaderComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
 export class MainPageComponent {
-
+  text = inject(TextContentService)
 }
