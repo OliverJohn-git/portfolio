@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TextContentService } from './text-content.service';
+import { TextContentService } from './text-content/text-content.service';
 
 describe('TextContentService', () => {
   let service: TextContentService;
