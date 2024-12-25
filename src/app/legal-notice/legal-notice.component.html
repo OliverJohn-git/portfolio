@@ -1,1 +1,18 @@
-<p>legal-notice works!</p>
+<main>
+    <app-header></app-header>
+    <div class="button" routerLink="/">&lt; Zurück</div>
+    <h1>{{text.getText("legalNotice")}}</h1>
+
+    <p>Oliver John<br />
+        Paul-Müller-Str. 37<br />
+        09599 Freiberg</p>
+
+    <h2>{{text.getText("contact")}}</h2>
+    <p>{{text.getText("phone")}}: <a href="tel: +491749673021">+49 1623008999</a><br />
+        E-Mail: <a href="mailto: contact@contact.net">contact&#64;contact.net</a></p>
+
+    <p>Quelle: <a
+            href="https://www.e-recht24.de/impressum-generator.html">https://www.e-recht24.de/impressum-generator.html</a>
+    </p>
+</main>
+<app-footer class="footer"></app-footer>

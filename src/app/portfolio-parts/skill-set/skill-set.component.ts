@@ -1,58 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TextContentService } from './../../shared/text-content/text-content.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-skill-set',
-  imports: [],
+  selector: 'app-skills',
+  imports: [CommonModule],
   templateUrl: './skill-set.component.html',
   styleUrl: './skill-set.component.scss'
 })
-export class SkillSetComponent {
-
-skills=[
-  {
-    image:"/assets/img/skill-set/html.png",
-    name:"HTML",
-  },
-  {
-    image:"/assets/img/skill-set/html.png",
-    name:"CSS",
-  },
-  {
-    image:"/assets/img/skill-set/html.png",
-    name:"JavaScript",
-  },
-  {
-    image:"/assets/img/skill-set/html.png",
-    name:"Material Design",
-  },
-  {
-    image:"/assets/img/skill-set/html.png",
-    name:"TypeScript",
-  },
-  {
-    image:"/assets/img/skill-set/html.png",
-    name:"Angular",
-  },
-  {
-    image:"/assets/img/skill-set/html.png",
-    name:"Firebase",
-  },
-  {
-    image:"/assets/img/skill-set/html.png",
-    name:"Git",
-  },
-  {
-    image:"/assets/img/skill-set/html.png",
-    name:"Rest-Api",
-  },
-  {
-    image:"/assets/img/skill-set/html.png",
-    name:"Scrum",
-  },
-  {
-    image:"/assets/img/skill-set/html.png",
-    name:"Growth mindset",
-  },
-]
-
+export class SkillsComponent {
+  text = inject(TextContentService)
+  skills: {name: string, src: string}[] = [
+    { name: 'HTML', src: "./assets/img/frontend_icons/html.svg" },
+    { name: 'CSS', src: "./assets/img/frontend_icons/css.svg" },
+    { name: 'JavaScript', src: "./assets/img/frontend_icons/javascript.svg" },
+    { name: 'TypeScript', src: "./assets/img/frontend_icons/typescript.svg" },
+    { name: 'Angular', src: "./assets/img/frontend_icons/angular.svg" },
+    { name: 'Firebase', src: "./assets/img/frontend_icons/firebase.svg" },
+    { name: 'Git', src: "./assets/img/frontend_icons/git.svg" },
+    { name: 'REST-API', src: "./assets/img/frontend_icons/rest_api.svg" },
+    { name: 'Scrum', src: "./assets/img/frontend_icons/scrum.svg" },
+    { name: 'Growth Mindset', src: "./assets/img/frontend_icons/growth.svg" }
+  ]
 }
