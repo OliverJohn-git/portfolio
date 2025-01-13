@@ -1,0 +1,24 @@
+@mixin centerFlex()
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin decorationDot($position: 'bottom')
+    position: relative
+    &::after
+        content: '\00B7'
+        color: #6AD7BF
+        position: absolute
+        font-size: 50px
+        @if $position == 'bottom'
+            top: -5px
+            left: 50%
+            transform: translateX(-50%)
+        @else if $position == 'right'
+            top: 50%
+            right: -12px
+            transform: translateY(-60%)
+        @else if $position == 'left'
+            top: 50%
+            left: -12px
+            transform: translateY(-56%)

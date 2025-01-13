@@ -1,0 +1,194 @@
+@use "app/shared/variables" as *
+@use "app/shared/mixins" as *
+
+*
+    margin: 0
+    scroll-behavior: smooth
+    box-sizing: border-box
+    transition: 75ms ease-in-out
+
+body
+    background: black
+
+a
+    text-decoration: none
+    color: white
+    font-family: 'Karla', sans-serif
+
+h1
+    color: $turquoise
+    font-family: 'Fira Code', sans-serif
+    font-weight: 700
+    letter-spacing: -0.03em
+    font-size: 56px
+    @media screen and ( min-width: 1024px )
+        font-size: 64px
+
+h2
+    font-family: 'Karla', sans-serif
+    color: $turquoise
+    font-weight: 700
+    font-size: 18px
+    @media screen and ( min-width: 1024px )
+        font-size: 24px
+
+/* karla-regular - latin */
+@font-face
+    font-display: swap
+    font-family: 'Karla'
+    font-style: normal
+    font-weight: 400
+    src: url('../public/assets/fonts/karla-v31-latin-regular.woff2') format('woff2')
+
+/* fira-code-regular - latin */
+@font-face
+    font-display: swap
+    font-family: 'Fira Code'
+    font-style: normal
+    font-weight: 400
+    src: url('../public/assets/fonts/fira-code-v22-latin-regular.woff2') format('woff2')
+
+.button
+    color: white
+    padding: 16px 24px
+    border-radius: 100px
+    border: 1px solid white
+    font-family: 'Karla', sans-serif
+    font-size: 18px
+    &:hover
+        color: $turquoise
+        border-color: $turquoise
+        cursor: pointer
+    &:active
+        color: $turquoise
+        border-color: $turquoise
+
+.cardContainer
+    display: flex
+    flex-direction: column
+    background: rgba(61, 207, 182, 0.2)
+    border: 1px solid #3DCFB6
+    border-radius: 30px
+    padding: 27px 32px
+    gap: 32px
+    @media screen and ( min-width: 1024px )
+        padding: 32px
+        gap: 40px
+
+@keyframes marquee_scroll
+    0%
+        left: 0
+        transform: translateX(0)
+    100%
+        transform: translateX(-802px)
+
+@keyframes marquee_scroll_desktop
+    0%
+        left: 0
+        transform: translateX(0)
+    100%
+        transform: translateX(-949px)
+
+@keyframes shadow_fade
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+
+@keyframes darkness_cover_left
+    0%
+        background-size: 0px
+        background-repeat: no-repeat
+    100%
+        background-size: 140%
+        background-repeat: no-repeat
+
+@keyframes darkness_cover_right
+    0%
+        background-size: 0px
+        background-position: right
+        background-repeat: no-repeat
+    100%
+        background-size: 140%
+        background-position: right
+        background-repeat: no-repeat
+
+@keyframes darkness_to_shadow_left
+    0%
+        background-size: calc( 100% + 350px )
+    100%
+        background-size: 100%
+
+@keyframes darkness_to_shadow_right
+    0%
+        background-position: -350px
+        background-size: calc( 100% + 350px )
+    100%
+        background-position: 0px
+        background-size: 100%
+
+@keyframes middle_glow
+    0%
+        box-shadow: 0px 0px 0px 0px rgba(61, 207, 182, 0.4)
+    100%
+        box-shadow: 0px 0px 60px 20px rgba(61, 207, 182, 0.4)
+
+@keyframes move_to_left_from_middle_animation
+    100%
+        transform: translateX(-100%)
+        order: 0
+        background: rgba(61, 207, 182, 0.2)
+        height: 248px
+
+@keyframes move_to_right_from_middle_animation
+    100%
+        transform: translateX(100%)
+        order: 2
+        background: rgba(61, 207, 182, 0.2)
+        height: 248px
+
+@keyframes move_from_left_to_middle_animation_small_mobile
+    100%
+        transform: translateX(120%)
+        order: 1
+        width: 270px
+        height: 420px
+        background: rgba(61, 207, 182, 0.4)
+
+@keyframes move_from_left_to_middle_animation_mobile
+    100%
+        transform: translateX(100%)
+        order: 1
+        height: 360px
+        background: rgba(61, 207, 182, 0.4)
+
+@keyframes move_from_left_to_middle_animation_desktop
+    100%
+        transform: translateX(100%)
+        order: 1
+        min-width: 620px
+        height: 360px
+        background: rgba(61, 207, 182, 0.4)
+
+@keyframes move_from_right_to_middle_animation_small_mobile
+    100%
+        transform: translateX(-120%)
+        order: 1
+        width: 270px
+        height: 420px
+        background: rgba(61, 207, 182, 0.4)
+
+@keyframes move_from_right_to_middle_animation_mobile
+    100%
+        transform: translateX(-100%)
+        order: 1
+        height: 360px
+        background: rgba(61, 207, 182, 0.4)
+
+@keyframes move_from_right_to_middle_animation_desktop
+    100%
+        transform: translateX(-100%)
+        order: 1
+        min-width: 620px
+        height: 360px
+        background: rgba(61, 207, 182, 0.4)

@@ -1,0 +1,166 @@
+@use './../../shared' as *
+$animationTime: 600ms
+
+main
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-self: center
+    gap: 32px
+    overflow-x: hidden
+    width: 100%
+    max-width: 1440px
+    @media screen and ( min-width: 1024px )
+        gap: 48px
+
+h1
+    font-family: 'Fira Code', sans-serif
+    font-weight: 700
+    text-align: center
+    font-size: 24px
+    @media screen and ( min-width: 1024px )
+        font-size: 32px
+    @media screen and ( max-width: 350px )
+        padding: 8px
+
+p
+    font-family: 'Karla', sans-serif
+    font-weight: 400
+    font-size: 16px
+    @media screen and ( min-width: 1024px )
+        font-size: 18px
+
+.references_container
+    display: flex
+    position: relative
+    margin: 0 var(--outer_padding)
+    align-items: center
+    gap: 8px
+    width: fit-content
+    height: 360px
+    @media screen and ( max-width: 410px )
+        height: 420px
+        
+    .reference
+        border-radius: 32px
+        padding: 40px
+        width: 358px
+        height: 248px
+        border: 1px solid #3dcfb7
+        background: rgba(61, 207, 182, 0.2)
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        position: relative
+        transition: all 0s
+        transform: translateX(0)
+
+        @media screen and ( min-width: 1024px )
+            min-width: 600px
+
+        p
+            color: #ffffffb0
+
+        .name_container
+            display: flex
+            align-items: center
+            gap: 16px
+
+            .name_line
+                height: 1px
+                background: white
+                flex: 1
+
+    .active_reference
+        height: 360px
+        background: rgba(61, 207, 182, 0.4)
+        order: 1
+        animation: middle_glow $animationTime ease-in-out forwards
+        @media screen and ( max-width: 410px )
+            width: 270px
+            height: 420px
+        @media screen and ( min-width: 1024px )
+            min-width: 620px
+
+        p
+            color: white
+            font-weight: 500
+
+    .left_reference
+        order: 0
+        .shadow_left
+            animation: darkness_to_shadow_left $animationTime ease-in-out
+
+    .right_reference
+        order: 2
+        .shadow_right
+            animation: darkness_to_shadow_right $animationTime ease-in-out
+
+    .move_to_left_from_middle
+        animation: move_to_left_from_middle_animation $animationTime ease-in-out
+        .shadow
+            @extend .shadow_left
+            animation: darkness_cover_left $animationTime forwards ease-in-out
+
+    .move_to_right_from_middle
+        animation: move_to_right_from_middle_animation $animationTime ease-in-out
+        .shadow
+            @extend .shadow_right
+            animation: darkness_cover_right $animationTime forwards ease-in-out
+
+    .move_from_left_to_middle
+        animation: move_from_left_to_middle_animation_small_mobile $animationTime ease-in-out
+        @media screen and ( min-width: 410px )
+            animation: move_from_left_to_middle_animation_mobile $animationTime ease-in-out
+        @media screen and ( min-width: 1024px )
+            animation: move_from_left_to_middle_animation_desktop $animationTime ease-in-out
+        .shadow
+            animation: shadow_fade $animationTime forwards
+
+    .move_from_right_to_middle
+        animation: move_from_right_to_middle_animation_small_mobile $animationTime ease-in-out
+        @media screen and ( min-width: 410px )
+            animation: move_from_right_to_middle_animation_mobile $animationTime ease-in-out
+        @media screen and ( min-width: 1024px )
+            animation: move_from_right_to_middle_animation_desktop $animationTime ease-in-out
+        .shadow
+            animation: shadow_fade $animationTime forwards
+
+    .move_outside_left
+        animation: shadow_fade $animationTime ease
+
+    .move_outside_right
+        animation: shadow_fade $animationTime ease
+
+.shadow
+    position: absolute
+    top: -2px
+    bottom: -2px
+    left: -2px
+    right: -2px
+    border-radius: 30px
+
+.shadow_left
+    background: linear-gradient(to right, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
+
+.shadow_right
+    background: linear-gradient(to left, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
+
+nav
+    display: flex
+    align-items: center
+    gap: 20px
+
+    .reference_nav
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        background: white
+
+    .active_nav
+        background: $turquoise
+
+    svg:hover
+        cursor: pointer
+        path
+            fill: $turquoise

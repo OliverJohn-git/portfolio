@@ -1,0 +1,16 @@
+<footer>
+    <div class="side">
+        <img id="logo" [src]="currentLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()"
+            (click)="scrollToTop()" alt="Logo">
+        <p>Web Developer</p>
+        <p>{{text.getText("freiberg")}}</p>
+    </div>
+    <div class="side">
+        <a href="https://github.com/OliverJohn-git" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/oliver-john-63bba4339/" target="_blank">LinkedIn</a>
+        <a href="mailto: oliver.john.buisness@gmail.com">Email</a>
+        <a routerLink="/legal-notice">{{text.getText("legalNotice")}}</a>
+        <a routerLink="/privacy-policy">{{text.getText("privacyPolicy")}}</a>
+    </div>
+    <span>© Oliver John 2024</span>
+</footer>

@@ -1,0 +1,205 @@
+@use './../../shared' as *
+
+section
+    background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%)
+    width: 100%
+    height: 100vh
+    position: relative
+    overflow: hidden
+    display: flex
+    justify-content: center
+
+main
+    display: flex
+    flex-direction: column
+    color: #D9D9D9
+    align-items: center
+    text-align: center
+    height: 100%
+    width: 100%
+    max-width: 1440px
+    padding: 30vh var(--outer_padding) 0 var(--outer_padding)
+
+    h2
+        font-family: 'Fira Code', sans-serif
+        font-size: 24px
+        font-weight: 400
+        color: white
+        @media screen and ( min-width: 630px )
+            font-size: 32px
+        @media screen and ( min-width: 1024px )
+            font-size: 40px
+
+    h1
+        font-family: 'Karla', sans-serif
+        font-size: 62px
+        font-weight: 700
+        color: white
+        @media screen and ( min-width: 630px )
+            font-size: 96px
+        @media screen and ( min-width: 1024px )
+            font-size: 128px
+
+.buttons
+    display: flex
+    gap: 24px
+    margin-top: 24px
+    @media screen and ( max-width: 395px )
+        flex-direction: column
+    @media screen and ( min-width: 1024px )
+        gap: 48px
+
+.button
+    overflow: hidden
+    &:hover span
+        position: relative
+        animation: button_text_slide 2s ease infinite
+
+@keyframes button_text_slide
+    0%
+        left: 0
+    29%
+        left: -120%
+    30%
+        opacity: 0
+        left: 120%
+    31%
+        opacity: 1
+    80%
+        left: 0
+
+.lateral_area
+    display: flex
+    justify-content: space-between
+    width: 100%
+    flex: 1
+    padding-top: 48px
+    position: relative
+
+    @media screen and ( min-width: 630px )
+        padding-top: 0
+
+    .lateral
+        display: flex
+        flex-direction: column
+        height: 100%
+        align-items: center
+        gap: 24px
+
+    .left_lateral
+        @extend .lateral
+
+        .animation_arrow
+            width: 30px
+            height: 48px
+            border-radius: 32px
+            border: 1px solid $turquoise
+            @include centerFlex()
+
+            .arrow
+                animation: left_lateral_animation 3s ease infinite
+                position: relative
+                border: 1px solid white
+                height: 16px
+                border-radius: 1px
+                &::before, &::after
+                    content: ''
+                    position: absolute
+                    bottom: 1px
+                    width: 5px
+                    border: 1px solid white
+                    border-radius: 1px
+                &::before
+                    left: -6px
+                    transform: rotate(45deg)
+                &::after
+                    left: -1px
+                    transform: rotate(-45deg)
+
+        .vertical_line
+            background: $turquoise
+
+    .vertical_line
+        width: 1px
+        flex: 1
+
+    .right_lateral
+        @extend .lateral
+
+        .socials
+            @include centerFlex()
+            flex-direction: column
+            gap: 24px
+            padding-top: 50px
+            width: 32px
+
+            #heroMail
+                display: none
+                font-size: 18px
+
+                @media screen and ( min-width: 1024px)
+                    margin-top: -80px
+                    padding-top: 2px
+                    width: 80px
+                    height: 30px
+                    transform: rotate(-90deg)
+                    display: flex
+                    &:hover
+                        color: $turquoise
+
+            a:not(#heroMail):hover
+                @include decorationDot('right')
+                svg
+                    path
+                        fill: white
+
+            @media screen and ( min-width: 1024px)
+                #heroMailIcon
+                    svg
+                        display: none
+
+        .vertical_line
+            background: white
+
+    .marquee
+        position: absolute
+        left: calc(var(--outer_padding) * -1 - 3px)
+        bottom: 15%
+        padding: 12px 0
+        background: #FFFFFF1F
+        backdrop-filter: blur(5.300000190734863px)
+        width: 1445px
+        transform: rotate(-3deg)
+        overflow: hidden
+
+        .marquee_content
+            display: flex
+            align-items: center
+            gap: 56px
+            font-family: 'Karla', sans-serif
+            color: $turquoise
+            @media screen and ( max-width: 1023px )
+                animation: marquee_scroll 12s linear infinite
+            @media screen and ( min-width: 1024px )
+                animation: marquee_scroll_desktop 20s linear infinite
+
+            p
+                font-size: 24px
+                min-width: fit-content
+                @media screen and ( min-width: 1024px )
+                    font-size: 32px
+
+            span
+                font-size: 50px
+                padding-bottom: 5px
+                line-height: 24px
+                @media screen and ( min-width: 1024px )
+                    line-height: 32px
+
+@keyframes left_lateral_animation
+    0%
+        transform: translateY(-2px)
+    50%
+        transform: translateY(10px)
+    100%
+        transform: translateY(-2px)

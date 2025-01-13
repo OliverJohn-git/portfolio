@@ -1,0 +1,28 @@
+@use './../shared' as *
+
+main
+    background: black
+    color: white
+    padding: 64px var(--outer_padding)
+    display: flex
+    flex-direction: column
+    align-items: start
+    gap: 16px
+    font-family: 'Karla', sans-serif
+    @media screen and ( min-width: 630px )
+        padding: 96px var(--outer_padding)       
+    @media screen and ( max-width: 540px )
+        font-size: 12px
+        .linkedIN
+            word-break: break-all
+
+    a:hover
+        color: $turquoise
+    
+    h1, h2
+        font-family: 'Fira Code', sans-serif
+    
+    @media screen and ( max-width: 700px )
+        h1
+            font-size: 24px
+    

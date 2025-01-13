@@ -1,0 +1,112 @@
+@use './../../shared' as *
+
+main
+    background: black
+    padding: 0px var(--outer_padding) 96px
+    display: flex
+    flex-direction: column
+    background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgba(8, 70, 59) 0%, #000000 100%)
+    gap: 40px
+    max-width: 1440px
+    justify-self: center
+    @media screen and ( min-width: 1024px )
+        gap: 20px
+        flex-direction: row
+        align-items: center
+
+#skillsText
+    display: flex
+    flex-direction: column
+    gap: 16px
+    @media screen and ( min-width: 1024px )
+        gap: 20px
+
+#skillsetContainer
+    @extend .cardContainer
+    align-items: start
+
+    p
+        font-family: 'Karla', sans-serif
+        color: white
+
+    #needAnotherSkill
+        display: flex
+        gap: 12px
+        @media screen and ( max-width: 400px )
+            flex-direction: column
+
+        span
+            color: white
+            font-family: 'Fira Code', sans-serif
+            font-size: 20px
+            font-weight: 700
+            &:nth-child(2)
+                color: $turquoise
+
+#skillsIcons
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    gap: 32px
+    height: fit-content
+
+    .skill
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        gap: 8px
+        width: 104px
+        color: white
+        font-family: 'Fira Code', sans-serif
+        font-size: 16px
+        &:hover
+            img
+                scale: 1.1
+
+    .hover_bubble
+        display: none
+        position: absolute
+        box-shadow: 0px 4px 4px 0px #00000040
+        background-color: white
+        border-radius: 10px
+        padding: 8px
+        color: $turquoise
+        font-family: 'Karla', sans-serif
+        font-size: 16px
+        flex-direction: column
+        align-items: center
+        text-align: center
+        gap: 8px
+        width: 188px
+        bottom: 100%
+        right: -16%
+        &::after
+            content: ''
+            position: absolute
+            bottom: -20px
+            right: 53.5px
+            border-width: 15px 15px 8px
+            border-radius: 8px
+            border-style: solid
+            border-color: white transparent transparent
+        .interestSkillsContainer
+            display: flex
+            width: fit-content
+            gap: 16px
+            .skill
+                color: $turquoise 
+                font-size: 12px
+                font-weight: 700
+                width: fit-content
+                img
+                    width: 32px
+                    height: 32px
+
+    .growthMindset
+        position: relative
+        &:hover
+            color: $turquoise
+            .hover_bubble
+                display: flex

@@ -1,0 +1,26 @@
+@use './../shared' as *
+
+main
+    background: black
+    color: white
+    padding: 64px var(--outer_padding)
+    display: flex
+    flex-direction: column
+    align-items: start
+    gap: 16px
+    font-family: 'Karla', sans-serif
+
+    a:hover
+        color: $turquoise
+
+    h1, h2
+        font-family: 'Fira Code', sans-serif
+
+    @media screen and ( min-width: 630px )
+        padding: 96px var(--outer_padding)
+
+.footer
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
