@@ -52,8 +52,8 @@ export class TextContentService {
         DE: "Hallo, ich bin ein lösungsorientierter Entwickler, der Probleme mit einer Kombination aus analytischem und intuitivem Denken angeht. Aktuell entwickle ich meine Programmierfähigkeiten kontinuierlich weiter und bin stets bestrebt, neues Wissen zu erwerben und meine Kompetenzen auszubauen."
       },
       aboutmeLocation: {
-        EN: "I've been working remotely in recent years and really enjoy having the flexibility to create my ideal workspace and the possibility to control sensory inputs.",
-        DE: "In den letzten Jahren habe ich remote gearbeitet und schätze die Flexibilität, meinen idealen Arbeitsplatz zu gestalten und die Möglichkeit, sensorische Reize steuern zu können."
+        EN: "I have worked as a service technician in recent years and am therefore well-versed in solution-oriented work. Working under time pressure is not a problem for me, as the job of a service technician primarily involves working under tight deadlines. I have always completed my tasks diligently, quickly, and with precision, and I will continue to do so in the future.",
+        DE: "Ich habe in den letzten Jahren als Servicetechniker gearbeitet und bin daher mit lösungsorientierter Arbeit bestens vertraut. Das Arbeiten unter Zeitdruck ist für mich kein Problem, da die Tätigkeit als Servicetechniker hauptsächlich aus Arbeiten unter engen Zeitvorgaben bestand. Ich habe meine Aufgaben stets zielstrebig, schnell und sorgfältig erledigt und werde dies auch in Zukunft so fortführen."
       },
       aboutmeMind: {
         EN: "I am an open-minded person and can identify myself with the personality type 'INTP'.",
