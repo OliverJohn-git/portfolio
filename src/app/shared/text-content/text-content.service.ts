@@ -137,7 +137,88 @@ export class TextContentService {
       whatMyColleaguesSay: {
         EN: "What my colleagues say about me",
         DE: "Was meine Kollegen über mich sagen"
+      },
+      contactMe: {
+        EN: "Contact me",
+        DE: "Schreiben Sie mir"
+      },
+      title: {
+        EN: "Let's work together",
+        DE: "Lassen Sie uns zusammenarbeiten"
+      },
+      gotProblem: {
+        EN: "Got a problem to solve?",
+        DE: "Haben Sie ein Problem zu lösen?"
+      },
+      contactThroughForm: {
+        EN: "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+        DE: "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen zu kennen und mit meiner Arbeit zu Ihren Projekten beizutragen."
+      },
+      needDev: {
+        EN: "Need a Frontend Developer?",
+        DE: "Brauchen Sie einen Frontend Entwickler?"
+      },
+      letsTalk: {
+        EN: "Let's talk!",
+        DE: "Kontaktieren sie mich!"
+      },
+      yourName1: {
+        EN: "What's your name?",
+        DE: "Wie lautet Ihr Name?"
+      },
+      yourName2: {
+        EN: "Your name goes here",
+        DE: "Ihr Name kommt hier hin"
+      },
+      yourName3: {
+        EN: "Oops! it seems your name is missing",
+        DE: "Ups! Ihr Name scheint zu fehlen"
+      },
+      yourMail1: {
+        EN: "What's your email?",
+        DE: "Wie lautet Ihre E-Mail?"
+      },
+      yourMail2: {
+        EN: "youremail@email.com",
+        DE: "ihreemail@email.com"
+      },
+      yourMail3: {
+        EN: "Hoppla! your email is required",
+        DE: "Hoppla! Ihre E-Mail ist erforderlich"
+      },
+      howHelp1: {
+        EN: "How can I help you?",
+        DE: "Wie kann ich Ihnen helfen?"
+      },
+      howHelp2: {
+        EN: "Hello Lukas, I am interested in...",
+        DE: "Hallo Lukas, ich bin interessiert an..."
+      },
+      howHelp3: {
+        EN: "What do you need to develop?",
+        DE: "Was wollen Sie entwickeln?"
+      },
+      checkBox1: {
+        EN: "I've read the ",
+        DE: "Ich habe die"
+      },
+      checkBox2: {
+        EN: "privacy policy",
+        DE: "Datenschutzerklärung"
+      },
+      checkBox3: {
+        EN: "and agree to the processing of my data as outlined.",
+        DE: "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+      },
+      checkBox4: {
+        EN: "Please accept the privacy policy.",
+        DE: "Bitte akzeptieren Sie die Datenschutzbestimmungen."
+      },
+      sayHello: {
+        EN: "Say Hello!",
+        DE: "Sag Hallo!"
       }
+      
     }
 
   constructor() {
