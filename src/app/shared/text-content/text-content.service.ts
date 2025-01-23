@@ -191,8 +191,8 @@ export class TextContentService {
         DE: "Wie kann ich Ihnen helfen?"
       },
       howHelp2: {
-        EN: "Hello Lukas, I am interested in...",
-        DE: "Hallo Lukas, ich bin interessiert an..."
+        EN: "Hello Oliver, I am interested in...",
+        DE: "Hallo Oliver, ich bin interessiert an..."
       },
       howHelp3: {
         EN: "What do you need to develop?",

@@ -32,25 +32,26 @@
                             (blur)="onNameBlur()"
                             [(ngModel)]="contactData.name">
                             <span class="your-name-required">
-                                {{text.getText("yourName3")}}
+                                {{text.getText(
+                                'yourName3')}}
                             </span>
                         </div>
 
                         <div class="your-email-container">
                             <label class="your-email" for="email">
-                                {{text.getText("yourEmail1")}}
+                                {{text.getText('yourMail1')}}
                             </label>
                             <input
                             id="email" 
                             class="your-email-input" 
                             type="text" name="email" 
-                            [placeholder]=" text.getText('yourEmail2')"
+                            [placeholder]=" text.getText('yourMail2')"
                             (focus)="onEmailFocus()"
                             (blur)="onEmailBlur()"
                             (keyup)="checkEmailValidation()"
                             [(ngModel)]="contactData.email">
                             <span class="your-email-required">
-                                {{text.getText("yourEmail3")}}
+                                {{text.getText("yourMail3")}}
                             </span>
                         </div>
 
