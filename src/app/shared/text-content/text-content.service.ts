@@ -159,8 +159,8 @@ export class TextContentService {
         DE: "Brauchen Sie einen Frontend Entwickler?"
       },
       letsTalk: {
-        EN: "Let's talk!",
-        DE: "Kontaktieren sie mich!"
+        EN: "Contact me through this contact form and let me know the problem statement, so I can create something new or improve a situation.",
+        DE: "Kontaktiere mich über dieses Kontaktformular und teile mir die Problemstellung mit, damit ich etwas Neues erschaffen oder eine Situation verbessern kann."
       },
       yourName1: {
         EN: "What's your name?",

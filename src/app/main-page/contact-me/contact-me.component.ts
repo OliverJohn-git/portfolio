@@ -3,11 +3,12 @@ import { TextContentService } from './../../shared/text-content/text-content.ser
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.sass'
 })
@@ -131,7 +132,7 @@ export class ContactMeComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'portfolio.developer-olli.net/sendMail.php',
+    endPoint: './sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
