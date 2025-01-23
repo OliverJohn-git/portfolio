@@ -1,28 +1,26 @@
 @use './../../shared' as *
-
 section
-  width: 1440px
-  height: 900px
-  display: flex
-  justify-content: center
-  align-items: center
-
   .contact-wrapper
-    width: 1248px
-    height: 560px
+    background: black
+    padding: 0px var(--outer_padding) 96px
     display: flex
-    justify-content: space-between
+    flex-direction: column
+    background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgba(8, 70, 59) 0%, #000000 100%)
+    gap: 40px
+    max-width: 1440px
+    justify-self: center
+    @media screen and ( min-width: 1024px )
+        gap: 20px
+        flex-direction: row
+        align-items: center
+
 
     .left-wrapper
-      width: 560px
-      height: auto
       display: flex
       flex-direction: column
       gap: 40px
 
       .title-container
-        width: 560px
-        height: auto
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -40,8 +38,6 @@ section
           font-weight: bold
 
       .got-a-problem-container
-        width: 560px
-        height: auto
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -71,20 +67,21 @@ section
             font-family: "Karla-Regular"
 
     .right-wrapper
-      width: 600px
       height: 560px
+      gap: 40px
       display: flex
       justify-content: center
       align-items: center
       // background-color: #fff;
+      
 
       .contact-form-container
         > form
           display: flex
           flex-direction: column
-          width: 600px
           height: 560px
           gap: 12px
+         
 
           .contact-form-top-wrapper
             width: 100%
@@ -129,7 +126,7 @@ section
                   color: #FFFFFFCC
 
               .how-can-i-help-input
-                min-width: 568px
+                min-width: 200px
                 max-width: 568px
                 min-height: 48px
                 max-height: 200px
