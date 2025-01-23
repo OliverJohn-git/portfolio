@@ -27,7 +27,7 @@ export class PortfolioComponent {
         DE: 'Aufgabenverwaltungssystem inspiriert vom Kanban-Prinzip. Ermöglicht das Erstellen und Organisieren von Aufgaben mittels Drag-and-Drop-Funktionalität sowie die Zuweisung von Benutzern und Kategorien.'
       },
       gitHub: 'https://github.com/OliverJohn-git/Join',
-      live: 'https://'
+      live: 'https://join.developer-olli.net/legalNotice.html'
     }
   ]
   overlayVisibility: boolean = false
