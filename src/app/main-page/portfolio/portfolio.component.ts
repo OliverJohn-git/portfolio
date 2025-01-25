@@ -28,6 +28,16 @@ export class PortfolioComponent {
       },
       gitHub: 'https://github.com/OliverJohn-git/Join',
       live: 'https://join.developer-olli.net/legalNotice.html'
+    }, {
+      title: 'El Polo Loco',
+      skills: ['JavaScript', 'HTML', 'CSS'],
+      previewSrc: './assets/img/Polo_loco_preview.png',
+      description: {
+        EN: 'Polo Loco is an jump and run game. Collect coins and sauce bottles to fight the Bosschicken.',
+        DE: 'Polo Loco ist ein Jump-and-Run-Spiel. Sammle Münzen und Soßenflaschen, um gegen den Boss-Huhn zu kämpfen.'
+      },
+      gitHub: 'https://github.com/OliverJohn-git/Join',
+      live: 'https://polo-loco.developer-olli.net'
     }
   ]
   overlayVisibility: boolean = false

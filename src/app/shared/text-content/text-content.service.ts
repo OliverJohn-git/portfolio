@@ -143,8 +143,8 @@ export class TextContentService {
         DE: "Schreiben Sie mir"
       },
       title: {
-        EN: "Let's work together",
-        DE: "Lassen Sie uns zusammenarbeiten"
+        EN: "Let's connect",
+        DE: "Lassen uns connecten"
       },
       gotProblem: {
         EN: "Got a problem to solve?",
