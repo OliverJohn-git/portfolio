@@ -147,8 +147,8 @@ export class TextContentService {
         DE: "Lassen uns connecten"
       },
       cv: {
-        EN: "Here you can download my CV",
-        DE: "Hier können Sie meinen Lebenslauf herunterladen"
+        EN: "My CV can be found here",
+        DE: "Mein Lebenslauf finden sie hier"
       },
       gotProblem: {
         EN: "Got a problem to solve?",
